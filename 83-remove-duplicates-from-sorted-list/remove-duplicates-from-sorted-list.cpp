@@ -10,17 +10,17 @@
  */
 class Solution {
 public:
-    ListNode* deleteDuplicates(ListNode* head) {
-       ListNode* current=head;
+   ListNode *deleteDuplicates(ListNode* head) {
+     ListNode* current=head;
 
-       while(current !=nullptr && current->next !=nullptr){
+     while(current !=nullptr && current->next !=nullptr){
         if(current->val==current->next->val){
             current->next=current->next->next;
-        }
-        else{
-            current=current->next;
-        }
-       } 
-       return head;
+            continue;
+        }else{
+             current=current->next;
+        }   
+     } 
+     return head;
     }
 };
